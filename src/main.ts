@@ -1,20 +1,23 @@
-/**
- * main.ts
- *
- * Bootstraps Vuetify and other plugins then mounts the App`
- */
+import App from './App.vue';
 
 // Plugins
-import { registerPlugins } from '@/plugins'
-
-// Components
-import App from './App.vue'
+import pinia from '@/stores';
+import router from '@/router';
+import vuetify from '@/vuetify';
 
 // Composables
-import { createApp } from 'vue'
+import { createApp } from 'vue';
+import { useAuthStore } from '@/stores/useAuthStore';
 
-const app = createApp(App)
+const app = createApp(App);
 
-registerPlugins(app)
+app.use(pinia);
+//need to set the user the first time (before router is used)
+const authStore = useAuthStore();
+await authStore.refreshUser();
 
-app.mount('#app')
+app.use(router);
+
+app.use(vuetify);
+
+app.mount('#app');

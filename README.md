@@ -6,8 +6,8 @@ Imagine it representing a fundamental concept or essence that's whole and unbrok
 
 ## TODO for 0.1
 
-- [ ] github auth with appwrite
-  - [ ] install router/appwrite
+- [x] github auth with appwrite
+  - [x] install router/appwrite
 - [ ] coround will become a git submodule for the i-show-coround showcase app
 - [ ] menu driven by json
   - [ ] install jsonforms
