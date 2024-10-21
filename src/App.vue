@@ -9,7 +9,7 @@
     <v-app-bar v-if="isAuthenticated">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-app-bar-title>Coround</v-app-bar-title>
+      <v-app-bar-title>appwrite-vuetify-router</v-app-bar-title>
       <v-spacer></v-spacer>
 
       <v-menu>
